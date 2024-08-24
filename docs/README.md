@@ -13,9 +13,9 @@
 
 
 ### 🚫 예외 처리
-- [ ] 자동차 이름이 영어가 아닌 경우 ```EnglishFormatException```
-- [ ] 자동차 이름이 중복된 수일 경우 ```NameDuplicateException```
-- [ ] 공백이 포함된 경우 ```EmptyStringArgumentException```
+- [x] 자동차 이름이 영어가 아닌 경우 ```EnglishFormatException```
+- [x] 자동차 이름이 중복된 수일 경우 ```NameDuplicateException```
+- [x] 공백이 포함된 경우 ```EmptyStringArgumentException```
 
 ---
 
