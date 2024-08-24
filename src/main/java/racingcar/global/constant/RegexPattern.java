@@ -1,4 +1,4 @@
-package racingcar.validation;
+package racingcar.global.constant;
 
 public enum RegexPattern {
 
