@@ -12,9 +12,9 @@
 
 
 ### 🚫 예외 처리
-- [x] 자동차 이름이 영어가 아닌 경우 ```EnglishFormatException```
-- [x] 자동차 이름이 중복된 수일 경우 ```NameDuplicateException```
-- [x] 공백이 포함된 경우 ```EmptyStringArgumentException```
+- [x] 자동차 이름이 영어가 아닌 경우
+- [x] 자동차 이름이 중복된 수일 경우
+- [x] 공백이 포함된 경우
 
 ---
 
@@ -25,9 +25,9 @@
 <br>
 
 ### 🚫 예외 처리
-- [ ] 입력한 수가 음수일 경우 ```NegativeNumberException```
-- [ ] 입력값이 숫자가 아닐 경우 ```NumberFormatException```
-- [ ] 입력값이 비어 있을 경우 ```EmptyStringArgumentException```
+- [ ] 입력한 수가 음수일 경우
+- [ ] 입력값이 숫자가 아닐 경우
+- [ ] 입력값이 비어 있을 경우
 
 ---
 
