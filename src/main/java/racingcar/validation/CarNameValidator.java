@@ -16,7 +16,7 @@ public class CarNameValidator {
 
     public void validateEnglishName(String name) {
         if (!isValidPattern(name, ENGLISH_RANGE)) {
-            throw new EnglishFormatException(CAR_NAME_TYPE.getMessage());
+            throw new EnglishFormatException(ERR_CAR_TYPE.getMessage());
         }
     }
 
@@ -29,7 +29,7 @@ public class CarNameValidator {
 
     public void validateNoWhitespace(String name) {
         if (isInvalidWhitespace(name)) {
-            throw new EmptyStringArgumentException(CAR_NAME_EMPTY_STRING.getMessage());
+            throw new EmptyStringArgumentException(ERR_CAR_EMPTY_STRING.getMessage());
         }
     }
 
@@ -39,7 +39,7 @@ public class CarNameValidator {
 
     private void checkDuplicateName(Set<String> uniqueNames, String name) {
         if (!uniqueNames.add(name)) {
-            throw new NameDuplicateException(CAR_NAME_DUPLICATE.getMessage());
+            throw new NameDuplicateException(ERR_CAR_DUPLICATE.getMessage());
         }
     }
 
