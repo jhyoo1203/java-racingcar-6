@@ -1,9 +1,12 @@
 package racingcar.domain;
 
+import camp.nextstep.edu.missionutils.Randoms;
+
 public class Car {
 
     private final String name;
     private int position;
+    private static final int MOVE_THRESHOLD = 4;
 
     public Car(String name) {
         this.name = name;
@@ -19,6 +22,9 @@ public class Car {
     }
 
     public void moveForward() {
-        this.position++;
+        int randomValue = Randoms.pickNumberInRange(0, 9);
+        if (randomValue >= MOVE_THRESHOLD) {
+            this.position++;
+        }
     }
 }
