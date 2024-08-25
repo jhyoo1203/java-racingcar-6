@@ -1,8 +1,6 @@
 package racingcar.validation;
 
-import racingcar.exception.EmptyStringArgumentException;
-import racingcar.exception.EnglishFormatException;
-import racingcar.exception.NameDuplicateException;
+import racingcar.exception.RacingCarException;
 import racingcar.global.constant.RegexPattern;
 
 import java.util.HashSet;
@@ -16,7 +14,7 @@ public class CarNameValidator {
 
     public void validateEnglishName(String name) {
         if (!isValidPattern(name, ENGLISH_RANGE)) {
-            throw new EnglishFormatException(ERR_CAR_TYPE.getMessage());
+            throw new RacingCarException(ERR_CAR_TYPE.getMessage());
         }
     }
 
@@ -29,7 +27,7 @@ public class CarNameValidator {
 
     public void validateNoWhitespace(String name) {
         if (isInvalidWhitespace(name)) {
-            throw new EmptyStringArgumentException(ERR_CAR_EMPTY_STRING.getMessage());
+            throw new RacingCarException(ERR_CAR_EMPTY_STRING.getMessage());
         }
     }
 
@@ -39,7 +37,7 @@ public class CarNameValidator {
 
     private void checkDuplicateName(Set<String> uniqueNames, String name) {
         if (!uniqueNames.add(name)) {
-            throw new NameDuplicateException(ERR_CAR_DUPLICATE.getMessage());
+            throw new RacingCarException(ERR_CAR_DUPLICATE.getMessage());
         }
     }
 
