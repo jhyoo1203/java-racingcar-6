@@ -12,7 +12,10 @@ import static racingcar.global.constant.RegexPattern.*;
 
 public class CarNameValidator {
 
+    private static final int MAX_NAME_LENGTH = 5;
+
     public void validateEnglishName(String name) {
+        validateNameLength(name);
         if (!isValidPattern(name, ENGLISH_RANGE)) {
             throw new RacingCarException(ERR_CAR_TYPE.getMessage());
         }
@@ -28,6 +31,12 @@ public class CarNameValidator {
     public void validateNoWhitespace(String name) {
         if (isInvalidWhitespace(name)) {
             throw new RacingCarException(ERR_CAR_EMPTY_STRING.getMessage());
+        }
+    }
+
+    private void validateNameLength(String name) {
+        if (name.isEmpty() || name.length() > MAX_NAME_LENGTH) {
+            throw new RacingCarException(ERR_CAR_NAME_LENGTH.getMessage());
         }
     }
 
