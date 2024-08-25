@@ -1,4 +1,4 @@
-package racingcar.domain;
+package racingcar.global;
 
 import static camp.nextstep.edu.missionutils.Console.readLine;
 
